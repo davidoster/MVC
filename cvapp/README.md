@@ -1,26 +1,25 @@
-# mvcapp
+# Steps to produce
 
-a [Sails v1](https://sailsjs.com) application
-
-
-### Links
-
-+ [Sails framework documentation](https://sailsjs.com/get-started)
-+ [Version notes / upgrading](https://sailsjs.com/documentation/upgrading)
-+ [Deployment tips](https://sailsjs.com/documentation/concepts/deployment)
-+ [Community support options](https://sailsjs.com/support)
-+ [Professional / enterprise options](https://sailsjs.com/enterprise)
-
-
-### Version info
-
-This app was originally generated on Tue Jun 29 2021 18:20:55 GMT+0300 (Eastern European Summer Time) using Sails v1.4.3.
-
-<!-- Internally, Sails used [`sails-generate@2.0.3`](https://github.com/balderdashy/sails-generate/tree/v2.0.3/lib/core-generators/new). -->
-
-
-
-<!--
-Note:  Generators are usually run using the globally-installed `sails` CLI (command-line interface).  This CLI version is _environment-specific_ rather than app-specific, thus over time, as a project's dependencies are upgraded or the project is worked on by different developers on different computers using different versions of Node.js, the Sails dependency in its package.json file may differ from the globally-installed Sails CLI release it was originally generated with.  (Be sure to always check out the relevant [upgrading guides](https://sailsjs.com/upgrading) before upgrading the version of Sails used by your app.  If you're stuck, [get help here](https://sailsjs.com/support).)
--->
-
++ Create a project
+    sails new name_of_the_project
++ Do we need npm i ?
+    Answer: NO
++ Inspect package.json
+    create any adittional scripts such as:
+        "dev": "nodemon sails lift --port XXXX"
++ config/routes.js
+    This file contains ALL of the valid URL paths of the project, valid = all the custom URLS we create that end up on a view / action
+    Use this file only if we need to appoint a url to a view or a controller
++ add a controller under api/controllers
+    The name of the controller must be in lower case separated with a dash if multiple words exist
+    Place under a separate folder (if needed) for a new set of controllers, e.g. api/controllers/products, 
+        new.js <--- new.ejs --->
+        edit.js <--- edit.ejs --->
+        update.js <--- list.ejs --->
+        list.js <--- list.ejs --->
+        delete.js <--- list.ejs --->
++ add a view under views/pages
+    Place under a separate folder (if needed) for a new set of view, e.g. views/pages/products,
+        new.ejs,
+        edit.ejs,
+        list.ejs

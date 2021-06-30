@@ -13,6 +13,7 @@ module.exports = {
 
 
   exits: {
+    error: {},
     success: {
       // responseType: 'view',
       viewTemplatePath: 'pages/cv/view-basic'
