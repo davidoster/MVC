@@ -19,11 +19,12 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/':                        { view: 'pages/homepage' },
-  '/cvs':                     { action: 'cv/cvs-basic'}, //locals: { layout: 'layouts/layout'}}, 
-  '/cvs/help':                { action: 'cv/cvs-help'},
-  'GET /products':            { action: 'products/list'},
-  'GET /products/new':        { action: 'products/new' },
+  '/'                             : { view: 'pages/homepage' },
+  '/cvs'                          : { action: 'cv/cvs-basic'}, //locals: { layout: 'layouts/layout'}}, 
+  '/cvs/help'                     : { action: 'cv/cvs-help'},
+  'GET /products'                 : { action: 'products/list'},
+  'GET /products/delete/:id'      : { action: 'products/delete'},
+  'GET /products/new'             : { action: 'products/new' },
 
 
   /***************************************************************************
