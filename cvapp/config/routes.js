@@ -20,8 +20,14 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/'                             : { view: 'pages/homepage' },
+
+
+  // CVS
   '/cvs'                          : { action: 'cv/cvs-basic'}, //locals: { layout: 'layouts/layout'}}, 
   '/cvs/help'                     : { action: 'cv/cvs-help'},
+
+
+  // Product
   'GET /products'                 : { action: 'products/list'},
   'GET /products/new'             : { action: 'products/new'}, 
   // 'GET /products/new'          : { view: 'pages/products/new' }
