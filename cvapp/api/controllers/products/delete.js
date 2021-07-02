@@ -3,24 +3,17 @@ module.exports = {
         id: { type: 'number'},
 
     },
-    exits: {
-        // error: {
-        //     viewTemplatePath:  'pages/products/notfound'
-        // },
-        // success: {
-        //     viewTemplatePath: 'pages/products/notfound'
-        // },
-    },
-    fn: async function(inputs,exits) {
+    fn: async function(inputs) {
         if(await Product.findOne(inputs.id)) {
             await Product.destroy(inputs.id)
             this.res.redirect('/products') // GET localhost:1337/products
-        } else {
-            console.log('Not deleted')
+        } else { // the user id was not found!!!! BUT this is NOOOOOOOTTTTTT AN ERROR
+            // 1. send some backend var to ejs to display
+            var result = `Product with id: ${inputs.id} was not found :((((` 
+            // 2. send error code, e.g. 404
             this.res.status(404)
-            result = `Product has not been found with id: ${inputs.id}`
+            // 3. use the notfound.ejs
             return this.res.view('pages/products/notfound', {result})
         }
     },
-
 }
