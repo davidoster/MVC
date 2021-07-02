@@ -27,8 +27,8 @@ module.exports.routes = {
   // 'GET /products/new'          : { view: 'pages/products/new' }
   'POST /products/new'            : { action: 'products/save'},
   'GET /products/delete/:id'      : { action: 'products/delete'},
-
-
+  'GET /products/edit/:id'        : { action: 'products/edit'},
+  'POST /products/update'         : { action: 'products/update'}
 
   /***************************************************************************
   *                                                                          *
