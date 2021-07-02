@@ -23,8 +23,11 @@ module.exports.routes = {
   '/cvs'                          : { action: 'cv/cvs-basic'}, //locals: { layout: 'layouts/layout'}}, 
   '/cvs/help'                     : { action: 'cv/cvs-help'},
   'GET /products'                 : { action: 'products/list'},
+  'GET /products/new'             : { action: 'products/new'}, 
+  // 'GET /products/new'          : { view: 'pages/products/new' }
+  'POST /products/new'            : { action: 'products/save'},
   'GET /products/delete/:id'      : { action: 'products/delete'},
-  'GET /products/new'             : { action: 'products/new' },
+
 
 
   /***************************************************************************
