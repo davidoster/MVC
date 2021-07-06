@@ -20,6 +20,8 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/'                             : { view: 'pages/homepage' },
+  '/login'                        : { action: 'users/login'},
+  'POST /login'                   : { action: 'users/checklogin'},
 
 
   // CVS
