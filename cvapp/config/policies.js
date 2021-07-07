@@ -17,7 +17,9 @@ module.exports.policies = {
   *                                                                          *
   ***************************************************************************/
 
-  'products/list': true,
-  'products/*': 'users/isLoggedIn'
+  'products/list'   : true,
+  'products/*'      : 'users/isLoggedIn',
+  'products/edit'   : 'users/isAdmin',
+  'products/delete' : 'users/isAdmin',
 
 };
