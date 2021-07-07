@@ -7,7 +7,9 @@ module.exports = {
    
 
     fn: async function({username, password}) {
-        if(username == 'admin' && password == 'admin') {
+        let theUser = await User.findOne({username})
+        if(theUser.isSuperAdmin) {
+        //if(username == 'admin' && password == 'admin') {
             console.log(this.req.session)
             this.req.session.cookie.maxAge = sails.config.custom.rememberMeCookieMaxAge
             this.req.session.username = username; // <----- This is the actual login!!!!! :0)
@@ -16,7 +18,8 @@ module.exports = {
             //     await sails.helpers.broadcastSessionChange(this.req);
             // }
         }
-        if(username == 'user' && password == 'user') {
+        if(!theUser.isSuperAdmin) {
+        //if(username == 'user' && password == 'user') {
             this.req.session.cookie.maxAge = sails.config.custom.rememberMeCookieMaxAge
             this.req.session.username = username;
             this.req.session.isAdmin = false
