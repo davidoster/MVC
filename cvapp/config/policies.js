@@ -18,9 +18,11 @@ module.exports.policies = {
   ***************************************************************************/
 
   'products/list'   : true,
+  'users/register'  : 'users/isNotLoggedIn',
   'products/*'      : 'users/isLoggedIn',
   'products/edit'   : 'users/isAdmin',
   'products/delete' : 'users/isAdmin',
-  'users/register'  : true, // how to change so the register form is only viewable to not loggedin users?
+  'users/login'     : 'users/isLoggedInShowLogout',
+  // 'users/register'  : true, // how to change so the register form is only viewable to not loggedin users?
 
 };

@@ -1,0 +1,4 @@
+1. when logged out navigate to homepage
+2. when logged in show logout button - DONE!!!!
+3. when logged in not be able to show register page - DONE!!!!
+4. At last use bootstrap, maybe datatables and create a menu
