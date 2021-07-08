@@ -1,7 +1,7 @@
 module.exports = async function(req, res, proceed) {
-    console.log(req.session.username)
+    // console.log(req.session.username)
     if(req.session.username) {
-        console.log(req.session)
+        // console.log(req.session)
         return proceed()
     }
     return res.forbidden() // if under api/repsonses/forbidden.js exists runs that js file

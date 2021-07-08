@@ -1,11 +1,12 @@
 module.exports = {
     exits: {
         success: {
-            viewTemplatePath: 'pages/users/login'
+            viewTemplatePath: 'pages/users/register'
         }
     },
 
     fn: async function() {
         return {}
     }
+
 }

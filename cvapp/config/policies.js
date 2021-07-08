@@ -21,5 +21,6 @@ module.exports.policies = {
   'products/*'      : 'users/isLoggedIn',
   'products/edit'   : 'users/isAdmin',
   'products/delete' : 'users/isAdmin',
+  'users/register'  : true, // how to change so the register form is only viewable to not loggedin users?
 
 };

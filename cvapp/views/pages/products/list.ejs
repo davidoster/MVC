@@ -7,5 +7,7 @@
     <%= product.dateOfRelease %>
     <% if(isAdmin) { %>
         <a href='<%= '/products/edit/' + product.id  %>'>Edit</a>&nbsp;<a href='<%= '/products/delete/' + product.id  %>'>Delete</a><br> 
+    <% } else { %>
+        <br>
     <% } %>
 <% })  %>

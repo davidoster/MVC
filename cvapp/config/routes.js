@@ -19,10 +19,12 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/'                             : { view: 'pages/homepage' },
+  '/'                             : { view:   'pages/homepage' },
   '/login'                        : { action: 'users/login'},
-  'POST /login'                   : { action: 'users/checklogin'},
-
+  'POST /login'                   : { action: 'users/checklogin' },
+  'GET /register'                 : { action: 'users/register' },
+  'POST /register'                : { action: 'users/savenewuser' },
+  'GET /logout'                   : { action: 'users/logout' },
 
   // CVS
   '/cvs'                          : { action: 'cv/cvs-basic'}, //locals: { layout: 'layouts/layout'}}, 
