@@ -1,9 +1,13 @@
 module.exports = {
-    tableName: 'newproducts',
+    tableName: 'products',
     attributes: {
         name: { type: 'string', required: true },
         description: { type: 'string', required: true } ,
         price: { type: 'number', columnType: 'FLOAT',  required: true },
-        dateOfRelease: { type: 'string', required: true, columnName: 'releasedate' }
+        dateOfRelease: { type: 'string', required: true, columnName: 'releasedate' },
+        customers: {
+            collection: 'user',
+            via: 'orders'
+        },
     }
 }

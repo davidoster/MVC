@@ -1,5 +1,5 @@
 module.exports = {
-
+    tableName: 'users',
     attributes: {
   
       //  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗
@@ -36,6 +36,12 @@ module.exports = {
         description: 'Whether this user is a "super admin" with extra permissions, etc.',
         extendedDescription:``
       },
+
+      orders: {
+        collection: 'product',
+        via: 'customers'
+      },
+
 
     }
 }
