@@ -5,9 +5,10 @@ module.exports = {
         description: { type: 'string', required: true } ,
         price: { type: 'number', columnType: 'FLOAT',  required: true },
         dateOfRelease: { type: 'string', required: true, columnName: 'releasedate' },
-        customers: {
+        customer: {
             collection: 'user',
-            via: 'orders'
+            via: 'product',
+            through: 'order'
         },
     }
 }

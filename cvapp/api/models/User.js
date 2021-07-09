@@ -37,9 +37,10 @@ module.exports = {
         extendedDescription:``
       },
 
-      orders: {
+      product: {
         collection: 'product',
-        via: 'customers'
+        via: 'customer',
+        through: 'order'
       },
 
 

@@ -12,6 +12,7 @@
     "nodemon": "^2.0.8",
     "sails": "^1.4.3",
     "sails-hook-grunt": "^4.0.0",
+    "sails-hook-organics": "^2.2.0",
     "sails-hook-orm": "^3.0.2",
     "sails-hook-sockets": "^2.0.0",
     "sails-mysql": "^1.0.1"
@@ -21,7 +22,7 @@
   },
   "scripts": {
     "start": "NODE_ENV=production node app.js",
-    "dev": "nodemon sails lift",
+    "dev": "nodemon",
     "test": "npm run lint && npm run custom-tests && echo 'Done.'",
     "lint": "./node_modules/eslint/bin/eslint.js . --max-warnings=0 --report-unused-disable-directives && echo '✔  Your .js files look good.'",
     "custom-tests": "echo \"(No other custom tests yet.)\" && echo"

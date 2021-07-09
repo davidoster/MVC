@@ -10,7 +10,8 @@ module.exports = {
         }
     },
     fn: async function(inputs) {
-        await User.create({username: inputs.username, password: inputs.password, 
+        // REMEMBER - npm install sails-hook-organics --save
+        await User.create({username: inputs.username, password: await sails.helpers.passwords.hashPassword(inputs.password), 
                            fullName: inputs.fullname, isSuperAdmin: false})
         return {}
     }
