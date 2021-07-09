@@ -37,7 +37,7 @@ module.exports = {
         extendedDescription:``
       },
 
-      product: {
+      product: { // model Product 
         collection: 'product',
         via: 'customer',
         through: 'order'

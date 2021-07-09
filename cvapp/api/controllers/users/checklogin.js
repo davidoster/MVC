@@ -29,6 +29,7 @@ module.exports = {
             console.log(this.req.session)
             this.req.session.cookie.maxAge = sails.config.custom.rememberMeCookieMaxAge
             this.req.session.username = username; // <----- This is the actual login!!!!! :0)
+            this.req.session.userId = theUser.id
             this.req.session.isAdmin = true
             // if (sails.hooks.sockets) {
             //     await sails.helpers.broadcastSessionChange(this.req);
@@ -38,6 +39,7 @@ module.exports = {
         //if(username == 'user' && password == 'user') {
             this.req.session.cookie.maxAge = sails.config.custom.rememberMeCookieMaxAge
             this.req.session.username = username;
+            this.req.session.userId = user.id
             this.req.session.isAdmin = false
         }
 

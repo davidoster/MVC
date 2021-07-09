@@ -7,6 +7,7 @@ module.exports = {
     },
 
     fn: async function() {
+        // return { products: await Product.find(), isLoggedIn: this.req.session.username, isAdmin: this.req.session.isAdmin }
         if(this.req.session.username) {
             if(this.req.session.isAdmin) {
                 return { products: await Product.find(), isLoggedIn: true, isAdmin: true }
