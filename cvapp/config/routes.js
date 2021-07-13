@@ -41,6 +41,11 @@ module.exports.routes = {
   'POST /products/update'         : { action: 'products/update'},
   'GET /products/buy/:id'         : { action: 'products/buy'},
 
+
+  /* REST API ENDPOINTS */
+
+  'POST /api/products'             : { action: 'products/rest/all' },
+
   /***************************************************************************
   *                                                                          *
   * More custom routes here...                                               *

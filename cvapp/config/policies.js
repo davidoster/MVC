@@ -20,6 +20,7 @@ module.exports.policies = {
   'products/list'   : true,
   'users/register'  : 'users/isNotLoggedIn',
   'products/*'      : 'users/isLoggedIn',
+  'products/rest/*' : 'users/isRestLoggedIn',
   'products/edit'   : 'users/isAdmin',
   'products/delete' : 'users/isAdmin',
   'users/login'     : 'users/isLoggedInShowLogout',
